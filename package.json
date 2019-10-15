@@ -39,7 +39,9 @@
     "jest-resolve": "24.9.0",
     "jest-watch-typeahead": "0.4.0",
     "lib-flexible": "^0.3.2",
+    "lodash": "^4.17.15",
     "mini-css-extract-plugin": "0.8.0",
+    "mockjs": "^1.0.1-beta3",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.5.0",
     "postcss-flexbugs-fixes": "4.1.0",
@@ -80,8 +82,13 @@
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
-    "extends": "react-app"
-  },
+    "extends": "react-app",
+    "rules": {
+      "no-undef": "off",
+      "no-restricted-globals": "off",
+      "no-unused-vars": "off"
+    }
+  },  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -147,5 +154,8 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.8"
   }
 }
